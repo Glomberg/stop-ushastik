@@ -10,17 +10,5 @@
 		$("#modal").css("transition","opacity .3s, visibility .3s");
 		$("#modal").css("visibility","hidden");
 		$("#modal").css("opacity","0");
-	});	
-	setTimeout(function(){
-		$(".slide2").css("opacity","1");
-		$(".slide1").css("opacity","0");
-	}, 10000);
-		setInterval(function(){
-			$(".slide1").css("opacity","1");
-			$(".slide2").css("opacity","0");
-			setTimeout(function(){
-				$(".slide2").css("opacity","1");
-				$(".slide1").css("opacity","0");
-			}, 10000);
-		}, 20000);
+	});
 });

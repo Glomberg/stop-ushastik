@@ -379,14 +379,12 @@ body {
 		position: absolute;
 		top: 0;
 		left: 0;
-		transition: opacity 3s;
 	}
 	.slide1 {
 		background: url('../images/slide1.jpg') no-repeat 0 -10px;
 	}
 	.slide2 {
 		background: url('../images/slide2.jpg') no-repeat 0 -10px;
-		opacity: 0;
 	}
 	.slider-right {
 		position: absolute;
@@ -473,9 +471,6 @@ body {
 			background: url('../images/telefoni.png') no-repeat 0 5px;
 			font-size: 16px;
 		}
-		.slider-right .telefoni p {
-			display: block;
-		}
 		.slider-right .email {
 			width: 224px;
 			height: 41px;
@@ -486,7 +481,7 @@ body {
 			padding-top: 13px;
 		}
 			.slider-right .telefoni, .slider-right .email {
-				font-size: 14px;
+				font-size: 15px;
 				text-align: right;
 				
 			}
@@ -597,37 +592,6 @@ article section {
 	.content nav li:hover a,
 	.content nav li.active a {
 		color: #FFFFFF;
-	}
-article.full {
-	position: relative;
-}
-	.full img.left {
-		float: left;
-	}
-	.full img.right {
-		float: right;
-	}
-	.full p {
-		color: #777777;
-		font-size: 16px;
-		margin-bottom: 35px;
-	}
-	.full h2 {
-		display: inline-block;
-		color: #795A93;
-		font-family: scadabold;
-		font-size: 22px;
-		padding-bottom: 15px;
-	}
-	.full a.button {
-		display: inline-block;
-		text-decoration: none;
-		color: #FFFFFF;
-		padding: 10px;
-		background-color: #795A92;
-		border-radius: 2px;
-		font-size: 12px;
-		margin-left: 900px;
 	}
 /*ФУТЕР*/
 footer {
