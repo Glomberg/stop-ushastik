@@ -1,8 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title><?php wp_title('|', true, 'right'); ?></title>
+	<meta name="format-detection" content="telephone=no">
+	<title><?php wp_title('', true, 'right'); ?></title>
 	<link rel="stylesheet" type="text/css" href="<?=get_template_directory_uri()?>/css/css-reset.css" />
 	<link rel="stylesheet" type="text/css" href="<?=get_template_directory_uri()?>/css/styles.css" />
 	<script src="<?=get_template_directory_uri()?>/js/jquery-1.11.2.min.js"></script>
@@ -58,13 +59,12 @@
 		</form>
 	</div>
 </div>
-<div class="wrapper">
 <!--ШАПКА САЙТА-->
 <div class="top">
 	<header>
 		<div class="logo"></div>
 		<div class="slogan">
-			<p>Стопушастик.ru только оригинальная и качественная<br />продукция из испании</p>
+			<p>Стопушастик.ru только оригинальная и качественная<br />продукция из Испании</p>
 		</div>
 		<div class="socials">
 			<p>мы в соцсети:</p>
@@ -76,8 +76,8 @@
 		</div>
 		<nav>
 			<ul>
-				<li><a class="active" href="#"><span class="menu-icon"></span>ЛОПОУХОСТЬ</a><span class="razdelitel"></span></li>
-				<li class="upper-text"><a href="#"><span class="menu-icon"></span>КОРРЕКТОР УШЕЙ</a><span class="razdelitel"></span></li>
+				<li><a class="active" href="http://stop-ushastik.ru"><span class="menu-icon"></span>ЛОПОУХОСТЬ</a><span class="razdelitel"></span></li>
+				<li class="upper-text"><a href="http://stop-ushastik.ru/korrektor/"><span class="menu-icon"></span>КОРРЕКТОР УШЕЙ</a><span class="razdelitel"></span></li>
 				<li><a href="#"><span class="menu-icon"></span>ИССЛЕДОВАНИЯ</a><span class="razdelitel"></span></li>
 				<li><a href="#"><span class="menu-icon"></span>ВОПРОСЫ</a><span class="razdelitel"></span></li>
 				<li><a href="#"><span class="menu-icon"></span>ОТЗЫВЫ</a><span class="razdelitel red"></span></li>
@@ -108,7 +108,7 @@
 				<p>8 (800)  &nbsp&nbsp<span>500-51-86</span> (РФ)</p>
 			</div>
 			<div class="email">
-				<p><span>e-mail:</span> otosticks@mail.ru</p>
+				<p><span>e-mail:</span> <br>stop-ushastik@mail.ru</p>
 			</div>
 		</div>
 		<div class="plashka"></div>

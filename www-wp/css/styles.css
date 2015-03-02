@@ -1,4 +1,4 @@
-﻿@font-face {
+@font-face {
 	font-family: scadaregular;
 	src: url(../fonts/Scada-Regular.ttf);
 }
@@ -10,17 +10,21 @@ body {
 	font-family: scadaregular;
 }
 .clear {
-	width: 100%;
+	/*width: 100%;*/
 	height: 0;
 	clear: both;
 }
+/*.wrapper {
+	width: 1010px;
+	margin: 0 auto;
+}*/
 /*МОДАЛЬНОЕ ОКНО - ФОРМА ЗАКАЗА*/
 #modal {
 	visibility: hidden;
 	opacity: 0;
-	width: 100%;
+	min-width: 100%;
 	height: auto;
-	min-height: 100%;
+	/*min-height: 100%;*/
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -188,6 +192,7 @@ body {
 /* СТИЛИ ДЛЯ ШАПКИ */
 .top {
 	height: 228px;
+	min-width: 1010px;
 	border-bottom: 8px solid #E8629C;
 	position: relative;
 }
@@ -379,12 +384,14 @@ body {
 		position: absolute;
 		top: 0;
 		left: 0;
+		transition: opacity 3s;
 	}
 	.slide1 {
 		background: url('../images/slide1.jpg') no-repeat 0 -10px;
 	}
 	.slide2 {
 		background: url('../images/slide2.jpg') no-repeat 0 -10px;
+		opacity: 0;
 	}
 	.slider-right {
 		position: absolute;
@@ -471,6 +478,9 @@ body {
 			background: url('../images/telefoni.png') no-repeat 0 5px;
 			font-size: 16px;
 		}
+		.slider-right .telefoni p {
+			display: block;
+		}
 		.slider-right .email {
 			width: 224px;
 			height: 41px;
@@ -481,7 +491,7 @@ body {
 			padding-top: 13px;
 		}
 			.slider-right .telefoni, .slider-right .email {
-				font-size: 15px;
+				font-size: 14px;
 				text-align: right;
 				
 			}
@@ -524,7 +534,7 @@ article section {
 	padding-left: 216px;
 	position: relative;
 }
-	section h2 {
+	section h2, section h2 a {
 		display: inline-block;
 		color: #795A93;
 		font-family: scadabold;
@@ -543,7 +553,7 @@ article section {
 		padding-top: 15px;
 		margin-bottom: 35px;
 	}
-	section a.read-more {
+	section a.read-more, .more-link {
 		display: block;
 		position: absolute;
 		right: 0;
@@ -574,6 +584,7 @@ article section {
 		height: 31px;
 		text-align: center;
 		background: url('../images/nav-inactive.png') no-repeat 0 0;
+		margin-left: 3px;
 	}
 	.content nav li a {
 		color: #4CC5E9;
@@ -592,6 +603,37 @@ article section {
 	.content nav li:hover a,
 	.content nav li.active a {
 		color: #FFFFFF;
+	}
+article.full {
+	position: relative;
+}
+	.full img.left {
+		float: left;
+	}
+	.full img.right {
+		float: right;
+	}
+	.full p {
+		color: #777777;
+		font-size: 16px;
+		margin-bottom: 35px;
+	}
+	.full h2 {
+		display: inline-block;
+		color: #795A93;
+		font-family: scadabold;
+		font-size: 22px;
+		padding-bottom: 15px;
+	}
+	.full a.button {
+		display: inline-block;
+		text-decoration: none;
+		color: #FFFFFF;
+		padding: 10px;
+		background-color: #795A92;
+		border-radius: 2px;
+		font-size: 12px;
+		margin-left: 900px;
 	}
 /*ФУТЕР*/
 footer {
@@ -620,10 +662,11 @@ footer span, footer a {
 	footer .voprosi {
 		color: #FFFFFF;
 		top: 25px;
-		right: 180px;
+		right: 220px;
 	}
 	footer .contacts {
 		color: #FFFFFF;
+		width: 200px;
 		top: 21px;
 		right: 55px;
 		line-height: 20px;

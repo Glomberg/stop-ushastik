@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <div class="content">
+	<!-- Цикл вывода постов -->
 	<?php while ( have_posts() ) : the_post(); ?>
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<figure><?php if ( has_post_thumbnail() ) {
@@ -7,12 +8,11 @@
 					}  ?>
 			</figure>
 			<section>
-				<h2><?php the_title(); ?></h2>
-				<?php the_category(''); ?>
-				<?php the_content('Читать далее'); ?>
+				<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Постоянная ссылка на <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+				<small><?php the_time('F jS, Y') ?></small>
+				<?php the_excerpt('Читать далее'); ?>
 			</section>
 		</article>
 	<?php endwhile; ?>
-	<?php if (function_exists('bazz_pagination')) bazz_pagination();  ?>
 </div>
 <?php get_footer(); ?>
