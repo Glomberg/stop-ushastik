@@ -1,11 +1,3 @@
-@font-face {
-	font-family: scadaregular;
-	src: url(../fonts/Scada-Regular.ttf);
-}
-@font-face {
-	font-family: scadabold;
-	src: url(../fonts/Scada-Bold.ttf);
-}
 body {
 	font-family: scadaregular;
 }
@@ -37,7 +29,6 @@ body {
 	}
 	.modal-inner form {
 		width: 660px;
-		height: 970px;
 		margin: 0 auto;
 		margin-top: 195px;
 		background-color: #FFFFFF;
@@ -50,7 +41,7 @@ body {
 	}
 		#modal-zakaz > label {
 			display: block;
-			margin-bottom: 15px;
+			margin-bottom: 8px;
 			color: #818181;
 		}
 			#modal-zakaz > label.inline {
@@ -61,16 +52,21 @@ body {
 				vertical-align: top;
 				margin-bottom: 25px;
 			}
-		#modal-zakaz > input {
+		#modal-zakaz > input, #modal-zakaz > select {
 			display: block;
 			margin-bottom: 25px;
+			color: #818181;
 			width: 473px;
 			height: 27px;
 			border: 3px solid #D1D1D1;
 			border-radius: 4px;
+			
+		}
+		#modal-zakaz > input {
+			font-size: 16px;
 		}
 			#modal-zakaz > input[type=radio] {
-			display: none;
+				display: none;
 			}
 			#modal-zakaz > input[type=radio] + label {
 				background: url('../images/radio.png') no-repeat 0 2px;
@@ -78,13 +74,43 @@ body {
 			#modal-zakaz > input[type=radio]:checked + label {
 				background: url('../images/radio-active.png') no-repeat 0 2px;
 			}
-		#modal-zakaz-submit {
+			#modal-zakaz > #modal-reset {
+				display: none;
+			}
+			#modal-zakaz > select {
+				font-size: 16px;
+				width: 481px;
+				height: 35px;
+				overflow: hidden;
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				-ms-appearance: none;
+				-o-appearance: none;
+				appearance: none;
+			}
+			#modal-zakaz > #city {
+				display: none;
+			}
+			#modal-zakaz > .results {
+				color: green;
+				padding-top: 10px;
+				font-family: scadabold;
+				text-align: center;
+			}
+			#modal-zakaz > .itog {
+				font-family: scadabold;
+				text-align: center;
+				margin-bottom: 10px;
+				font-size: 18px;
+				color: #818181;
+			}
+			#modal-zakaz-submit {
 			display: inline-block;
 			padding: 20px 140px;
 			color: #FFFFFF;
 			background-color: #E5097F;
 			text-decoration: none;
-			position: absolute;
+			margin-left: 80px;
 			bottom: 40px;
 			left: 150px;
 			font-family: scadabold;
@@ -111,7 +137,8 @@ body {
 		display: block;
 		position: absolute;
 		top: 52px;
-		left: 230px;
+		left: 220px;
+		font-size: 18px;
 		padding: 0 16px;
 		background-color: #FFFFFF;
 		color: #818181;
@@ -157,6 +184,13 @@ body {
 			font-family: scadabold;
 			margin-bottom: 25px;
 		}
+		#bonus {
+			color: #383838;
+			font-size: 14px;
+			font-family: scadabold;
+			height: 20px;
+			margin-bottom: 25px;
+		}
 	.modal-inner .opisanie {
 		width: 150px;
 		height: 50px;
@@ -173,9 +207,10 @@ body {
 		}
 		.opisanie.detskiy {
 			background: url('../images/detskiy.png') no-repeat 0 0;
+			display: none;
 		}
 		.opisanie.vzrosliy {
-			background: url('../images/detskiy.png') no-repeat 0 0;
+			background: url('../images/vzrosliy.png') no-repeat 0 0;
 			display: none;
 		}
 	.modal-inner form .close-button {
@@ -205,7 +240,6 @@ body {
 		width: 180px;
 		height: 120px;
 		background: url('../images/logo.png') no-repeat 3px 39px;
-		cursor: pointer;
 	}
 	.top .slogan {
 		display: inline-block;
@@ -271,7 +305,7 @@ body {
 		box-sizing: border-box;
 	}
 	.top ul {
-		padding-top: 3px;
+		padding-top: 1px;
 	}
 	.top li {
 		display: inline-block;
@@ -362,14 +396,14 @@ body {
 	.top span {
 		display: inline-block;
 		width: 3px;
-		height: 65px;
-		border-radius: 2px;
+		height: 59px;
+		/*border-radius: 2px;*/
 		background-color: #795A93;
 		position: absolute;
 		right: -3px;
-		top: -3px;
+		top: 0px;
 	}
-/*СЛАЙДЕР С ФОРМОЙ ЗАКАЗА*/
+/*СЛАЙДЕР С ФОРМОЙ ОБРАТНОГО ЗВОНКА*/
 .main {
 	background: #FFFFFF;
 	background-image: linear-gradient(to bottom, #C2E8FB 0%, #FFFFFF 240px);
@@ -385,6 +419,7 @@ body {
 		top: 0;
 		left: 0;
 		transition: opacity 3s;
+		cursor: pointer;
 	}
 	.slide1 {
 		background: url('../images/slide1.jpg') no-repeat 0 -10px;
@@ -418,24 +453,26 @@ body {
 			width: 224px;
 			border: 7px solid #795A92;
 			border-radius: 4px;
-			margin: 20px auto;
-			padding: 10px 20px 5px 15px;
+			margin: 5px auto;
+			/*padding: 10px 20px 5px 15px;*/
+			padding: 5px;
 			-moz-box-sizing: border-box;
 			-webkit-box-sizing: border-box;
 			box-sizing: border-box;
 		}
 		.slider-right form p {
-			font-size: 9px;
+			font-size: 14px;
 			margin-bottom: 7px;
+			text-align: center;
 		}
 		.slider-right form label {
 			display: block;
-			font-size: 10px;
+			font-size: 14px;
 			margin-bottom: 5px;
 		}
 		.slider-right form input {
 			display: block;
-			width: 172px;
+			width: 200px;
 			height: 15px;
 			border-radius: 2px;
 			margin-bottom: 7px;
@@ -445,7 +482,7 @@ body {
 		}
 		.slider-right form textarea {
 			resize: none;
-			width: 172px;
+			width: 200px;
 			height: 30px;
 			border-radius: 2px;
 			margin-bottom: 7px;
@@ -453,33 +490,39 @@ body {
 			-webkit-box-sizing: border-box;
 			box-sizing: border-box;
 		}
-			.slider-right form input:hover,
-			.slider-right form input:focus,
-			.slider-right form textarea:hover,
-			.slider-right form textarea:focus {
-				border: 1px solid #795A92;
-			}
 		.slider-right form a {
 			display: inline-block;
-			font-size: 10px;
+			font-size: 14px;
 			color: #FFFFFF;
-			padding: 5px 15px;
+			padding: 3px 13px;
 			border-radius: 2px;
 			background-color: #795A92;
 			text-decoration: none;
 			float: right;
+		}
+		#slider-form .zvonok-results {
+			position: absolute;
+			top: 36px;
+			left: 34px;
+			width: 200px;
+			height: 86px;
+			padding-top: 50px;
+			background-color: #E8F6FF;
+			text-align: center;
+			display: none;
 		}
 		.slider-right .telefoni {
 			width: 224px;
 			height: 55px;
 			position: absolute;
 			left: 20px;
-			bottom: 80px;
+			bottom: 75px;
 			background: url('../images/telefoni.png') no-repeat 0 5px;
 			font-size: 16px;
 		}
 		.slider-right .telefoni p {
 			display: block;
+			margin-bottom: 3px;
 		}
 		.slider-right .email {
 			width: 224px;
@@ -491,9 +534,8 @@ body {
 			padding-top: 13px;
 		}
 			.slider-right .telefoni, .slider-right .email {
-				font-size: 14px;
+				font-size: 16px;
 				text-align: right;
-				
 			}
 			.slider-right .telefoni p > span, .slider-right .email  p > span {
 				font-family: scadabold;
@@ -509,6 +551,7 @@ body {
 }
 /*КОНТЕНТ*/
 .content {
+	color: #777777;
 	width: 1010px;
 	margin: 0 auto;
 }
@@ -531,6 +574,7 @@ article figure {
 	}
 article section {
 	margin-top: -10px;
+	min-height: 195px;
 	padding-left: 216px;
 	position: relative;
 }
@@ -653,11 +697,11 @@ footer span, footer a {
 		height: 14px;
 		line-height: 14px;
 		vertical-align: middle;
-		padding-left: 18px;
+		/*padding-left: 18px;*/
 		color: #91E4FD;
-		background: url('../images/kruzhok.png') no-repeat 0 0;
+		/*background: url('../images/kruzhok.png') no-repeat 0 0;*/
 		top: 25px;
-		left: 360px;
+		left: 55px;
 	}
 	footer .voprosi {
 		color: #FFFFFF;
@@ -686,3 +730,130 @@ footer span, footer a {
 		bottom: 25px;
 		left: 360px;
 	}
+	
+	
+/*СТИЛИ ДЛЯ ВОРДПРЕССА*/
+section.single {
+	padding-left: 0;
+}
+	section.single > p {
+		font-size: 18px;
+	}
+/*КОММЕНТАРИИ*/
+#comments {
+	width: 1010px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.commentlist {
+	padding: 45px 20px 0;
+	width: 660px;
+	float: left;
+	max-height: 800px;
+	overflow-y: auto;
+}
+	.commentlist  .vcard > img,
+	.commentlist  .comment-meta {
+		display: none;
+	}
+	.commentlist > h2 {
+		display: inline-block;
+		margin-bottom: 20px;
+		color: #795A93;
+		font-size: 22px;
+		font-family: scadabold;
+	}
+	.commentlist > li {
+		border-bottom: 1px dotted grey;
+		margin-bottom: 20px;
+		position: relative;
+	}
+	.commentlist  .vcard > cite,
+	.commentlist  .vcard > span {
+		margin-bottom: 20px;
+		font-family: scadabold;
+		font-size: 18px;
+		font-style: normal;
+	}
+	.commentlist  p {
+		padding-top: 30px;
+		padding-left: 130px;
+		margin-bottom: 20px;
+		color: #777777;
+	}
+#respond {
+	position: relative;
+	width: 255px;
+	float: right;
+	background-color: #E8F6FF;
+	border-radius: 4px;
+	padding: 40px 50px 20px 35px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #886FA1;
+	font-family: scadabold;
+}
+	#respond > h3 {
+		display: block;
+		margin-bottom: 40px;
+	}
+	#respond >h3 > span  {
+		width: 79px;
+		height: 75px;
+		position: absolute;
+		top: -10px;
+		right: 5px;
+		background: url('../images/obloko.png') no-repeat 0 0;
+	}
+	#respond label {
+		display: block;
+		margin-bottom: 5px;
+		font-size: 16px;
+	}
+	#respond input, #respond textarea{
+		margin-bottom: 10px;
+		width: 165px;
+		height: 15px;
+		border-radius: 2px;
+	}
+	#respond textarea {
+		height: 70px;
+		resize: none;
+	}
+	#respond input[type=submit] {
+		width: 80px;
+		height: 25px;
+		color: #FFFFFF;
+		background-color: #795A92;
+		margin-left: 90px;
+		transition: opacity .3s;
+	}
+		#respond input[type=submit]:hover {
+			opacity: 0.75;
+		}
+	p.comment-notes {
+		display: none;
+	}
+.content table, .content tr, .content td {
+	border: 1px solid grey;
+	font-size: 22px;
+	height: 28px;
+	text-align: center;
+}
+a.table-buy {
+	background-color: #E8619B;
+	border-radius: 4px;
+	text-align: center;
+	margin-left: 800px;
+	display: block;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-size: 14px;
+	padding-top: 23px;
+	height: 36px;
+	transition: opacity 0.3s;
+}
+a.table-buy:hover {
+	opacity: 0.75;
+}

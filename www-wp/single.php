@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-			<figure><img src="images/uho.jpg" alt=""/></figure>
-			<section>
+			<section class="single">
 				<h2><?php the_title(); ?></h2>
 				<?php the_category(''); ?>
 				<?php the_content(); ?>
 			</section>
+			<?php edit_post_link( __( 'Править', 'striped' ), '<div class="edit-link">', '</div>' ); ?>
 		</article>
 <?php endwhile; ?>
 	<?php // If comments are open or we have at least one comment, load up the comment template.
@@ -14,4 +14,5 @@
 	comments_template();
 	endif;
 	?>
+<div class="clear"></div>
 <?php get_footer(); ?>

@@ -14,5 +14,8 @@
 		</article>
 	<?php endwhile; ?>
 	<?php if (function_exists('bazz_pagination')) bazz_pagination();  ?>
+	<script>
+		$("#menu-1").addClass("active");
+	</script>
 </div>
 <?php get_footer(); ?>

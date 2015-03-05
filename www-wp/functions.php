@@ -1,4 +1,9 @@
 <?php
+/////////////////////////
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
+/////////////////////////
+
 if ( function_exists( 'add_theme_support' ) ) {
 add_theme_support( 'post-thumbnails' );
 }

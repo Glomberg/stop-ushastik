@@ -14,5 +14,7 @@
 			</section>
 		</article>
 	<?php endwhile; ?>
+	<div class="clear"></div>
+	<?php if (function_exists('bazz_pagination')) bazz_pagination();  ?>
 </div>
 <?php get_footer(); ?>
