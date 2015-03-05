@@ -20,7 +20,7 @@ body {
 }*/
 /*МОДАЛЬНОЕ ОКНО - ФОРМА ЗАКАЗА*/
 #modal {
-	visibility: hidden;
+	visibility: visible;
 	opacity: 0;
 	width: 100%;
 	height: auto;
