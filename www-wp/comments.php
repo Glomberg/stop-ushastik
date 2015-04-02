@@ -1,7 +1,7 @@
-﻿<div id="comments">
+<div id="comments">
 	<?php if ( post_password_required() ) : ?>
 	<p class="nopassword"><?php _e( 'Комментарии Вам не доступны.', 'striped' ); ?></p>
-	</div><!-- #comments -->
+</div><!-- #comments -->
 <?php
 	/*
 	* Stop the rest of comments.php from being processed,
@@ -13,23 +13,26 @@ endif;
 ?>
 <?php if ( have_comments() ) : ?>
 	<ul class="commentlist">
+		<div class="article-line"></div>
 		<h2>Отзывы</h2>
 		<?php wp_list_comments(); ?>
 	</ul>
+	<?php  //if (function_exists('bazz_pagination_comments')) bazz_pagination_comments();
+			paginate_comments_links(); ?>
 	<?php endif; ?>
 <?php if (!comments_open()) {
 	echo "<p class='nocomments'>Комментарии запрещены</p>";
 }
 else {
 	if (!get_comments_number()) {
-		echo "<p class='nocomments'>Комментариев пока нет, будьте первым.</p>";
+		echo "<p class='nocomments'>Никто ничего еще не написал, будьте первым.</p>";
 	}
 }
 ?>
 <?php 
 $fields =  array(
 	'author' => '<label for="author">Ваше имя</label><input id="author" name="author" type="text" value="' .esc_attr( $commenter['comment_author'] ) . '" />',
-	'email'  => '<label for="email">E-mail</label><input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" /></p>',
+	'email'  => '<label for="email">E-mail</label><input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" />',
 );
 $comments_args = array(
 	'fields' => $fields,

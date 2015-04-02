@@ -3,7 +3,7 @@
 *Template Name: Для "ИССЛЕДОВАНИЯ"
 */
 get_header(); ?>
-<div class="content">
-	<?php iinclude_page(39); ?>
-</div>
+
+	<?php iinclude_page(45); ?>
+
 <?php get_footer(); ?>

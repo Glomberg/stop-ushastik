@@ -1,4 +1,4 @@
-﻿html, body, div, span, object, iframe,
+html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
@@ -76,8 +76,9 @@ hr {
     margin:1em 0;
     padding:0;
 }
-input, select, textarea {
+input, input:focus, textarea, textarea:focus, select {
     vertical-align:middle;
 	box-shadow: none;
 	border: none;
+	outline: none;
 }
